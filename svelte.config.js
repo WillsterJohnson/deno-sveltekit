@@ -55,7 +55,7 @@ const config = {
 		prerender: {
 			concurrency: 1,
 			crawl: true,
-			entries: '*',
+			entries: ['*'],
 			handleHttpError: 'fail',
 			handleMissingId: 'fail',
 			handleEntryGeneratorMismatch: 'fail',
