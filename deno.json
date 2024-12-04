@@ -1,0 +1,83 @@
+{
+	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+	"tasks": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"nodeModulesDir": "auto",
+	"imports": {
+		"@sveltejs/adapter-auto": "npm:@sveltejs/adapter-auto@^3.0.0",
+		"@sveltejs/kit": "npm:@sveltejs/kit@^2.9.0",
+		"@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.0",
+		"svelte": "npm:svelte@^5.0.0",
+		"svelte-check": "npm:svelte-check@^4.0.0",
+		"typescript": "npm:typescript@^5.0.0",
+		"vite": "npm:vite@^6.0.0",
+		"@std/assert": "jsr:@std/assert@1"
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"lineWidth": 100,
+		"proseWrap": "preserve",
+		"semiColons": false,
+		"singleQuote": true,
+		"useTabs": true
+	},
+	"lint": {
+		"report": "pretty",
+		"rules": {
+			"include": [
+				"camelcase",
+				"default-param-last",
+				"eqeqeq",
+				"guard-for-in",
+				"no-await-in-loop",
+				"no-boolean-literal-for-arguments",
+				"no-const-assign",
+				"no-eval",
+				"no-external-import",
+				"no-implicit-declare-namespace-export",
+				"no-inferrable-types",
+				"no-non-null-asserted-optional-chain",
+				"no-non-null-assertion",
+				"no-self-compare",
+				"no-sparse-arrays",
+				"no-sync-fn-in-async-fn",
+				"no-throw-literal",
+				"no-top-level-await",
+				"no-undef",
+				"prefer-ascii",
+				"single-var-declarator",
+				"triple-slash-reference",
+				"verbatim-module-syntax"
+			]
+		}
+	},
+	"compilerOptions": {
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"checkJs": false,
+		"exactOptionalPropertyTypes": true,
+		"noErrorTruncation": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"strictBindCallApply": true,
+		"strictBuiltinIteratorReturn": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"useUnknownInCatchVariables": true,
+		"verbatimModuleSyntax": true
+	}
+}
